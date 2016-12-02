@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Test Page</title>
+    </head>
+    <body>
+        <h1>Test Page</h1>
+        <form action="/endpoint"
+              method="post">
+            <input type="submit"
+                   value="Test" />
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}"/>
+        </form>
+    </body>
+
+</html>
